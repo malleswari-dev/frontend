@@ -20,9 +20,9 @@ RUN touch /var/run/nginx.pid && \
         chown -R nginx:nginx /var/run/nginx.pid /run/nginx.pid
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY static /usr/share/nginx/html/
-USER nginx
-CMD ["nginx", "-g", "daemon off;"]
 
+CMD ["nginx", "-g", "daemon off;"]
+USER nginx
 
 # FROM nginx
 # RUN rm -rf /usr/share/nginx/html/index.xtml
